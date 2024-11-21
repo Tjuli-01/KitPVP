@@ -1,0 +1,32 @@
+name: KitPVP
+version: '${project.version}'
+main: de.tjuli.kitpvp.KitPVP
+api-version: 1.13
+authors: [ Tjuli ]
+
+commands:
+  kitpvp:
+    description: The main command of the plugin
+
+
+permissions:
+    kitpvp.create_kit:
+      default: true
+    kitpvp.delete_kit:
+      default: true
+    kitpvp.edit_kit:
+      default: true
+    kitpvp.open_gui:
+      default: true
+    kitpvp.spawn_npc:
+      default: op
+
+    kitpvp.admin:
+      default: op
+      children:
+        kitpvp.create_kit: true
+        kitpvp.delete_kit: true
+        kitpvp.update_kit: true
+        kitpvp.load_kit: true
+        kitpvp.spawn_npc: true
+        kitpvp.open_gui: true
